@@ -65,7 +65,7 @@ export default function ProductPage() {
 
       <Navbar />
 
-      <div style={{ maxWidth:"1200px", margin:"0 auto", padding:"24px 60px 0" }}>
+      <div className="max-w" style={{ maxWidth:"1200px", margin:"0 auto", padding:"24px 60px 0" }}>
         <p style={{ fontSize:"12px", color:"#aaa", letterSpacing:"0.06em" }}>
           <Link href="/" style={{ color:"#aaa", textDecoration:"none" }}>Ana səhifə</Link>
           <span style={{ margin:"0 8px" }}>·</span>
@@ -75,8 +75,8 @@ export default function ProductPage() {
         </p>
       </div>
 
-      <section className="product-detail" style={{ maxWidth:"1200px", margin:"0 auto", padding:"48px 60px 80px", display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"start" }}>
-        <div className="fade" style={{ position:"sticky", top:"88px" }}>
+      <section className="product-detail-grid max-w section-pad" style={{ maxWidth:"1200px", margin:"0 auto", padding:"48px 60px 80px", display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"start" }}>
+        <div className="fade product-sticky" style={{ position:"sticky", top:"88px" }}>
           <div style={{ background:product.color, aspectRatio:"1", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden" }}>
             {product.image_url
               ? <img src={product.image_url} alt={product.name} style={{ width:"100%", height:"100%", objectFit:"cover" }} />
@@ -170,7 +170,7 @@ export default function ProductPage() {
 
       {related.length > 0 && (
         <section style={{ borderTop:"1px solid #e8e3d8", background:"#fff" }}>
-          <div style={{ maxWidth:"1200px", margin:"0 auto", padding:"64px 60px" }}>
+          <div className="max-w section-pad" style={{ maxWidth:"1200px", margin:"0 auto", padding:"64px 60px" }}>
             <p style={{ fontSize:"11px", letterSpacing:"0.2em", textTransform:"uppercase", color:"#2C5E3A", marginBottom:"12px" }}>Oxşar məhsullar</p>
             <h2 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"36px", fontWeight:300, color:"#1a1a18", marginBottom:"40px" }}>Bəlkə bəyənərsiniz</h2>
             <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"24px" }}>

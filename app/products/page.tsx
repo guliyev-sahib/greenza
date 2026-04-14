@@ -93,7 +93,7 @@ export default function ProductsPage() {
 
       <Navbar />
 
-      <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "64px 60px 100px" }}>
+      <main className="max-w section-pad" style={{ maxWidth: "1200px", margin: "0 auto", padding: "64px 60px 100px" }}>
         <div style={{ marginBottom: "56px" }}>
           <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "12px" }}>Kolleksiya</p>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px,5vw,60px)", fontWeight: 300, color: "#1a1a18", lineHeight: 1, marginBottom: "32px" }}>

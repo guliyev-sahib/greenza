@@ -43,7 +43,7 @@ export default function CartPage() {
 
       <Navbar />
 
-      <main style={{ maxWidth:"1200px", margin:"0 auto", padding:"64px 60px 100px" }}>
+      <main className="max-w section-pad" style={{ maxWidth:"1200px", margin:"0 auto", padding:"64px 60px 100px" }}>
 
         {/* Header */}
         <div className="fade" style={{ marginBottom:"48px" }}>
@@ -66,7 +66,7 @@ export default function CartPage() {
             </Link>
           </div>
         ) : (
-          <div className="cart-grid" style={{ display:"grid", gridTemplateColumns:"1fr 380px", gap:"60px", alignItems:"start" }}>
+          <div className="cart-layout" style={{ display:"grid", gridTemplateColumns:"1fr 380px", gap:"60px", alignItems:"start" }}>
 
             {/* ITEMS */}
             <div>

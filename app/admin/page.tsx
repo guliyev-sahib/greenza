@@ -167,7 +167,7 @@ export default function AdminPage() {
 
       <Navbar />
 
-      <div style={{ maxWidth:"1100px", margin:"0 auto", padding:"40px" }}>
+      <div className="max-w section-pad" style={{ maxWidth:"1100px", margin:"0 auto", padding:"40px" }}>
 
         {view === "list" && (
           <>
@@ -202,6 +202,7 @@ export default function AdminPage() {
             {loading ? (
               <p style={{ textAlign:"center", color:"#aaa", padding:"60px 0", fontFamily:"'Cormorant Garamond',serif", fontSize:"20px" }}>Yüklənir...</p>
             ) : (
+              <div className="admin-table-wrap">
               <div className="admin-table" style={{ background:"#fff", border:"1px solid #e8e3d8" }}>
                 <div style={{ display:"grid", gridTemplateColumns:"60px 1fr 120px 100px 110px 90px 44px", padding:"12px 24px", borderBottom:"1px solid #e8e3d8" }}>
                   {["Foto","Ad","Kateqoriya","Qiymət","Stok","Düzəlt",""].map((h,i) => (
@@ -257,6 +258,7 @@ export default function AdminPage() {
                   </div>
                 ))}
               </div>
+              </div>
             )}
           </>
         )}
@@ -275,7 +277,7 @@ export default function AdminPage() {
               </div>
             </div>
 
-            <div style={{ display:"grid", gridTemplateColumns:"1fr 340px", gap:"32px", alignItems:"start" }}>
+            <div className="admin-grid" style={{ display:"grid", gridTemplateColumns:"1fr 340px", gap:"32px", alignItems:"start" }}>
               {/* Form */}
               <div style={{ background:"#fff", border:"1px solid #e8e3d8", padding:"36px" }}>
                 <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"24px", marginBottom:"24px" }}>

@@ -35,7 +35,7 @@ export default function BlogArticlePage() {
       `}</style>
 
       <Navbar />
-      <main style={{ maxWidth: "980px", margin: "0 auto", padding: "84px 60px 100px" }}>
+      <main className="max-w section-pad" style={{ maxWidth: "980px", margin: "0 auto", padding: "84px 60px 100px" }}>
         <p style={{ fontSize: "12px", color: "#aaa", marginBottom: "18px" }}>
           <Link href="/blog" style={{ color: "#aaa", textDecoration: "none" }}>Bloq</Link> · {post.title}
         </p>
@@ -64,7 +64,7 @@ export default function BlogArticlePage() {
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "36px", color: "#1a1a18", fontWeight: 300, marginBottom: "16px" }}>
             Oxşar məqalələr
           </h2>
-          <div className="two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px" }}>
+          <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px" }}>
             {related.map((item) => (
               <Link key={item.slug} href={`/blog/${item.slug}`} style={{ background: "#fff", border: "1px solid #e8e3d8", padding: "18px", textDecoration: "none", color: "inherit" }}>
                 <p style={{ fontSize: "10px", textTransform: "uppercase", letterSpacing: "0.12em", color: "#2C5E3A", marginBottom: "8px" }}>{item.category}</p>

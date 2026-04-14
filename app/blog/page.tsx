@@ -14,13 +14,13 @@ export default function BlogPage() {
       `}</style>
 
       <Navbar />
-      <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "84px 60px 100px" }}>
+      <main className="max-w section-pad" style={{ maxWidth: "1200px", margin: "0 auto", padding: "84px 60px 100px" }}>
         <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "12px" }}>Bloq</p>
         <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(42px, 5vw, 64px)", fontWeight: 300, color: "#1a1a18", marginBottom: "34px" }}>
           Dəri baxımı haqqında yazılar
         </h1>
 
-        <section className="two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+        <section className="blog-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
           {blogPosts.map((post) => (
             <article key={post.slug} style={{ background: "#fff", border: "1px solid #e8e3d8", padding: "26px" }}>
               <div style={{ display: "flex", gap: "10px", alignItems: "center", marginBottom: "12px", flexWrap: "wrap" }}>

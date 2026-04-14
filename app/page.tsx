@@ -130,7 +130,7 @@ export default function Home() {
       <Navbar />
 
       <section
-        className="hero-grid"
+        className="hero-section max-w"
         style={{
           minHeight: "100vh",
           display: "grid",
@@ -211,7 +211,7 @@ export default function Home() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", opacity: 0, animation: "fadeIn 1s ease 0.3s forwards" }}>
-          <div className="float hero-visual" style={{ position: "relative", width: "480px", height: "480px" }}>
+          <div className="float hero-visual-wrap" style={{ position: "relative", width: "480px", height: "480px" }}>
             <div
               style={{
                 position: "absolute",
@@ -290,7 +290,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="products" style={{ maxWidth: "1200px", margin: "0 auto", padding: "100px 60px" }}>
+      <section id="products" className="max-w section-pad" style={{ maxWidth: "1200px", margin: "0 auto", padding: "100px 60px" }}>
         <div {...fadeIn("prod-title")} style={{ textAlign: "center", marginBottom: "60px", ...fadeIn("prod-title").style }}>
           <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "16px" }}>Kolleksiya</p>
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(36px, 4vw, 52px)", fontWeight: 300, color: "#1a1a18" }}>Bizim Məhsullar</h2>
@@ -340,7 +340,7 @@ export default function Home() {
       </section>
 
       <section style={{ background: "#fff", borderTop: "1px solid #e8e3d8" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "100px 60px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "100px", alignItems: "center" }}>
+        <div className="max-w section-pad ritual-grid" style={{ maxWidth: "1200px", margin: "0 auto", padding: "100px 60px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "100px", alignItems: "center" }}>
           <div {...fadeIn("days-left")} style={fadeIn("days-left").style}>
             <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "16px" }}>Nəticə</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px, 5vw, 64px)", fontWeight: 300, color: "#1a1a18", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -398,7 +398,7 @@ export default function Home() {
       </section>
 
       <section style={{ background: "#F5F2E8", borderTop: "1px solid #e8e3d8" }}>
-        <div {...fadeIn("ingr")} style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 60px", textAlign: "center", ...fadeIn("ingr").style }}>
+        <div className="max-w section-pad" {...fadeIn("ingr")} style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 60px", textAlign: "center", ...fadeIn("ingr").style }}>
           <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "16px" }}>İnqrediyentlər</p>
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "36px", fontWeight: 300, marginBottom: "40px", color: "#1a1a18" }}>
             Yalnız təbii, yalnız saf
@@ -414,7 +414,7 @@ export default function Home() {
       </section>
 
       <section style={{ background: "#2C5E3A" }}>
-        <div {...fadeIn("cta")} style={{ maxWidth: "800px", margin: "0 auto", padding: "100px 60px", textAlign: "center", ...fadeIn("cta").style }}>
+        <div className="max-w section-pad" {...fadeIn("cta")} style={{ maxWidth: "800px", margin: "0 auto", padding: "100px 60px", textAlign: "center", ...fadeIn("cta").style }}>
           <GreenzaIcon size={40} color="rgba(245,242,232,0.3)" />
           <h2
             style={{

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useCart } from "@/lib/cart-context";
+import GreenzaIcon from "@/components/GreenzaIcon";
 
 function Logo() {
   return (
@@ -76,75 +77,53 @@ export default function Navbar() {
         </span>
       </Link>
 
-      <div className="nav-links" style={{ display: "flex", gap: "40px", alignItems: "center" }}>
-        {[
-          { label: "Məhsullar", href: "/products" },
-          { label: "Haqqımızda", href: "/about" },
-          { label: "Bloq", href: "/blog" },
-        ].map((item) => (
-          <Link key={item.label} href={item.href} style={{ fontFamily: "'Inter'", fontSize: "13px", color: "#666", textDecoration: "none", letterSpacing: "0.06em" }}>
-            {item.label}
-          </Link>
-        ))}
-
-        <Link href="/cart" style={{ position:"relative", display:"flex", alignItems:"center", padding:"8px" }}>
+      <div style={{ display:"flex", gap:"40px", alignItems:"center" }} className="nav-desktop">
+        <Link href="/products" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Məhsullar</Link>
+        <Link href="/about" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Haqqımızda</Link>
+        <Link href="/blog" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Bloq</Link>
+        <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
           <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:500 }}>{count}</span>}
+          {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
         </Link>
-
-        <a
-          href="https://wa.me/994518754538"
-          style={{
-            background: "#2C5E3A",
-            color: "#F5F2E8",
-            fontFamily: "'Inter'",
-            fontSize: "12px",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            padding: "10px 24px",
-            textDecoration: "none",
-          }}
-        >
-          Sifariş Et
-        </a>
+        <a href="https://wa.me/994518754538" style={{ background:"#2C5E3A", color:"#F5F2E8", fontFamily:"'Inter'", fontSize:"12px", letterSpacing:"0.1em", textTransform:"uppercase", padding:"10px 24px", textDecoration:"none" }}>Sifariş Et</a>
       </div>
 
-      <button
-        className="hamburger"
-        onClick={() => setMenuOpen(true)}
-        style={{ display: "none", background: "none", border: "none", cursor: "pointer", padding: "8px" }}
-        aria-label="Open menu"
-      >
-        <svg width="24" height="24" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
+      <div style={{ display:"flex", alignItems:"center", gap:"16px" }} className="nav-mobile">
+        <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
+          <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
+        </Link>
+        <button onClick={() => setMenuOpen(true)} style={{ background:"none", border:"none", cursor:"pointer", padding:"8px", display:"flex" }}>
+          <svg width="22" height="22" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
 
       {menuOpen && (
-        <div style={{ position: "fixed", inset: 0, background: "#F5F2E8", zIndex: 999, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "40px", animation: "mobile-menu-drop 0.28s ease" }}>
+        <div style={{ position:"fixed", inset:0, background:"#F5F2E8", zIndex:999, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:"36px" }}>
           <button
             onClick={() => setMenuOpen(false)}
-            style={{ position: "absolute", top: "24px", right: "24px", background: "none", border: "none", fontSize: "28px", cursor: "pointer", color: "#1a1a18" }}
+            style={{ position:"absolute", top:"20px", right:"20px", background:"none", border:"none", fontSize:"28px", cursor:"pointer", color:"#1a1a18", lineHeight:1 }}
             aria-label="Close menu"
           >
             ✕
           </button>
-          {["Məhsullar→/products", "Haqqımızda→/about", "Bloq→/blog"].map((item) => {
-            const [label, href] = item.split("→");
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "36px", fontWeight: 300, color: "#1a1a18", textDecoration: "none" }}
-              >
-                {label}
-              </Link>
-            );
-          })}
-          <a href="https://wa.me/994518754538" style={{ fontFamily: "'Inter'", fontSize: "13px", letterSpacing: "0.12em", textTransform: "uppercase", background: "#2C5E3A", color: "#F5F2E8", padding: "14px 40px", textDecoration: "none" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"20px" }}>
+            <GreenzaIcon size={28} color="#2C5E3A" />
+            <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"28px", color:"#2C5E3A" }}>Greenza</span>
+          </div>
+          {[
+            { label:"Məhsullar", href:"/products" },
+            { label:"Haqqımızda", href:"/about" },
+            { label:"Bloq", href:"/blog" },
+          ].map(item => (
+            <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}
+              style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"40px", fontWeight:300, color:"#1a1a18", textDecoration:"none" }}>
+              {item.label}
+            </Link>
+          ))}
+          <a href="https://wa.me/994518754538" style={{ marginTop:"16px", background:"#2C5E3A", color:"#F5F2E8", fontFamily:"'Inter'", fontSize:"12px", letterSpacing:"0.12em", textTransform:"uppercase", padding:"14px 48px", textDecoration:"none" }}>
             Sifariş Et
           </a>
         </div>

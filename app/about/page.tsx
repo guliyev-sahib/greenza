@@ -19,8 +19,8 @@ export default function AboutPage() {
       `}</style>
 
       <Navbar />
-      <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "84px 60px 100px" }}>
-        <section className="two-col" style={{ display: "grid", gridTemplateColumns: "1fr 360px", gap: "60px", alignItems: "center", marginBottom: "90px" }}>
+      <main className="max-w section-pad" style={{ maxWidth: "1200px", margin: "0 auto", padding: "84px 60px 100px" }}>
+        <section className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 360px", gap: "60px", alignItems: "center", marginBottom: "90px" }}>
           <div>
             <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#2C5E3A", marginBottom: "12px" }}>Haqqımızda</p>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(44px, 5vw, 68px)", fontWeight: 300, color: "#1a1a18", lineHeight: 1.02, marginBottom: "18px" }}>
