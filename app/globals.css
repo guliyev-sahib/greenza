@@ -82,7 +82,7 @@
   .nav-desktop { display: none !important; }
 
   .hero-section { grid-template-columns: 1fr !important; padding: 80px 20px 40px !important; gap: 40px !important; }
-  .hero-visual-wrap { width: 260px !important; height: 260px !important; margin: 0 auto !important; }
+  .hero-visual-wrap { width: 360px !important; height: 360px !important; margin: 0 auto !important; max-width: 100% !important; }
 
   .products-grid { grid-template-columns: repeat(2,1fr) !important; gap: 12px !important; }
 
