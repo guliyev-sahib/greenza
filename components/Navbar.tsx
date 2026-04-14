@@ -53,52 +53,54 @@ export default function Navbar() {
   }
 
   return (
-    <nav
-      style={{
-        position: isHome ? "fixed" : "sticky",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 60px",
-        height: "64px",
-        background: "rgba(245,242,232,0.96)",
-        borderBottom: "1px solid #e8e3d8",
-        backdropFilter: "blur(12px)",
-      }}
-    >
-      <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-        <Logo />
-        <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "22px", fontWeight: 400, color: "#2C5E3A", letterSpacing: "0.02em" }}>
-          Greenza
-        </span>
-      </Link>
-
-      <div style={{ display:"flex", gap:"40px", alignItems:"center" }} className="nav-desktop">
-        <Link href="/products" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Məhsullar</Link>
-        <Link href="/about" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Haqqımızda</Link>
-        <Link href="/blog" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Bloq</Link>
-        <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
-          <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
+    <>
+      <nav
+        style={{
+          position: isHome ? "fixed" : "sticky",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 100,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 60px",
+          height: "64px",
+          background: "rgba(245,242,232,0.96)",
+          borderBottom: "1px solid #e8e3d8",
+          backdropFilter: "blur(12px)",
+        }}
+      >
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+          <Logo />
+          <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "22px", fontWeight: 400, color: "#2C5E3A", letterSpacing: "0.02em" }}>
+            Greenza
+          </span>
         </Link>
-        <a href="https://wa.me/994518754538" style={{ background:"#2C5E3A", color:"#F5F2E8", fontFamily:"'Inter'", fontSize:"12px", letterSpacing:"0.1em", textTransform:"uppercase", padding:"10px 24px", textDecoration:"none" }}>Sifariş Et</a>
-      </div>
 
-      <div style={{ display:"flex", alignItems:"center", gap:"16px" }} className="nav-mobile">
-        <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
-          <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
-        </Link>
-        <button onClick={() => setMenuOpen(true)} style={{ background:"none", border:"none", cursor:"pointer", padding:"8px", display:"flex" }}>
-          <svg width="22" height="22" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
-      </div>
+        <div style={{ display:"flex", gap:"40px", alignItems:"center" }} className="nav-desktop">
+          <Link href="/products" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Məhsullar</Link>
+          <Link href="/about" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Haqqımızda</Link>
+          <Link href="/blog" style={{ fontFamily:"'Inter'", fontSize:"13px", color:"#666", textDecoration:"none", letterSpacing:"0.06em" }}>Bloq</Link>
+          <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
+            <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
+          </Link>
+          <a href="https://wa.me/994518754538" style={{ background:"#2C5E3A", color:"#F5F2E8", fontFamily:"'Inter'", fontSize:"12px", letterSpacing:"0.1em", textTransform:"uppercase", padding:"10px 24px", textDecoration:"none" }}>Sifariş Et</a>
+        </div>
+
+        <div style={{ display:"flex", alignItems:"center", gap:"16px" }} className="nav-mobile">
+          <Link href="/cart" style={{ position:"relative", display:"flex", padding:"8px" }}>
+            <svg width="20" height="20" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            {count > 0 && <span style={{ position:"absolute", top:"2px", right:"2px", background:"#2C5E3A", color:"#fff", borderRadius:"50%", width:"16px", height:"16px", fontSize:"10px", display:"flex", alignItems:"center", justifyContent:"center" }}>{count}</span>}
+          </Link>
+          <button onClick={() => setMenuOpen(true)} style={{ background:"none", border:"none", cursor:"pointer", padding:"8px", display:"flex" }}>
+            <svg width="22" height="22" fill="none" stroke="#1a1a18" strokeWidth="1.5" viewBox="0 0 24 24">
+              <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
 
       {menuOpen && (
         <div style={{ position:"fixed", inset:0, background:"#F5F2E8", zIndex:999, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:"36px" }}>
@@ -128,7 +130,7 @@ export default function Navbar() {
           </a>
         </div>
       )}
-    </nav>
+    </>
   );
 }
 
